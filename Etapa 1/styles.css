@@ -1,0 +1,39 @@
+.table-header{
+    background-color: #f1f1f1;
+    border: 3px solid rgb(92, 92, 92);
+}
+
+
+.btn-table{
+    height: 2rem;
+    width: auto;
+    padding: 0 1rem ; 
+    border: 3px solid rgb(92, 92, 92);
+    
+}
+
+.btn-table:hover{
+    background-color: #a1a1a1;
+    transition: 300ms;
+}
+
+.table-item{
+   text-align: center;
+}
+
+#propietarios{
+
+    border-collapse: collapse;
+    border-radius: 15px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
+tbody{
+    border: 3px solid rgb(92, 92, 92);
+}
+
+td{
+    border: 1px solid rgb(92, 92, 92);
+}
+
