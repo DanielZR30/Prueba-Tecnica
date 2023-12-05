@@ -38,7 +38,7 @@
 
 <script>
 import 'bootstrap'
-import { getPropietarios,addNewPropietario,updatePropietario, deletePropietario } from '../utils/PropietariosDao'
+import { getPropietarios,addNewPropietario,updatePropietario, deletePropietario } from '../utils/PropietariosDao.js'
 export default {
   name: 'Propietarios',
   data() {

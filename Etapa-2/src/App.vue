@@ -1,6 +1,5 @@
 <script setup>
 import Propietarios from './components/Propietarios.vue';
-import Propietario from './components/Propietario.vue';
 
 </script>
 

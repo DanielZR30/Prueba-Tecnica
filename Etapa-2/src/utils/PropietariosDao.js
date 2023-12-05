@@ -14,16 +14,16 @@ import {
 } from 'firebase/firestore'
 
 export async function addNewPropietario(propietario) {
-  await addDoc(collection(db, 'propietarios'), propietario)
+  await setDoc(doc(db, 'propietarios',propietario.id.toString()), propietario)
 }
 
 export async function deletePropietario(id) {
-  await deleteDoc(doc(db, 'propietarios', id))
+  await deleteDoc(doc(db, 'propietarios', id.toString()))
 }
 
 export async function updatePropietario(id, propietario) {
   try {
-    await setDoc(doc(db, 'propietarios', id), propietario, { merge: true })
+    await setDoc(doc(db, 'propietarios', id.toString()), propietario, { merge: true })
   } catch (error) {
     alert('Error al actualizar')
   }
@@ -40,5 +40,5 @@ export async function getPropietarios() {
 }
 
 export async function getPropietario(id) {
-  return await getDoc(doc(db, 'propietarios', id))
+  return await getDoc(doc(db, 'propietarios', id.toString()))
 }

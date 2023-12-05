@@ -1,4 +1,5 @@
-import {getFirestore,onSnapshot,collection,doc,deleteDoc,setDoc,addDoc,orderBy,query} from 'firebase/firestore'
+import {getFirestore} from 'firebase/firestore'
+
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
@@ -9,18 +10,19 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyB0Owuoxe-nepX9lmF4RbRjZMhnYmPklLo",
-  authDomain: "propietarios-f825a.firebaseapp.com",
-  projectId: "propietarios-f825a",
-  storageBucket: "propietarios-f825a.appspot.com",
-  messagingSenderId: "483782038071",
-  appId: "1:483782038071:web:1c6dcfb088ca300a8325b2",
-  measurementId: "G-170XKRLP13"
+  apiKey: import.meta.env.VITE_API_KEY,
+  authDomain: import.meta.env.VITE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_MESSAGGING_SENDER_ID,
+  appId: import.meta.env.VITE_APP_ID,
+  measurementId: import.meta.env.VITE_MEASUREMENT_ID
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 const db = getFirestore(app)
+
 
 export default db;
